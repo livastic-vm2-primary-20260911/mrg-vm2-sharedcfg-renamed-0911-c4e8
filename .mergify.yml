@@ -1,0 +1,7 @@
+pull_request_rules:
+  - name: vm2 shared source marker
+    conditions:
+      - author = livastic-vm2-secondary-20260911
+    actions:
+      comment:
+        message: VM2-EXTENDS-SOURCE-MARKER-ORIGINAL
