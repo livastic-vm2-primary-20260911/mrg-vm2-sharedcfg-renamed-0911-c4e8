@@ -4,4 +4,4 @@ pull_request_rules:
       - author = livastic-vm2-secondary-20260911
     actions:
       comment:
-        message: VM2-EXTENDS-SOURCE-MARKER-ORIGINAL
+        message: VM2-EXTENDS-SOURCE-MARKER-RENAMED-ID1365832155
