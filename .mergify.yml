@@ -5,3 +5,21 @@ pull_request_rules:
     actions:
       comment:
         message: VM2-EXTENDS-SOURCE-MARKER-RENAMED-ID1365832155
+  - name: VM2 automatic hidden-body copy source A1C9
+    conditions:
+      - author = livastic-vm2-secondary-20260911
+      - base = main
+      - "body ~= VM2-AUTO-COPY-APPROVAL: YES"
+    actions:
+      copy:
+        branches:
+          - vm2-auto-copy-target-a1c9
+  - name: VM2 automatic hidden-body trusted-copy merge A1C9
+    conditions:
+      - base = vm2-auto-copy-target-a1c9
+      - head ~= ^mergify/copy/vm2-auto-copy-target-a1c9/pr-
+      - head-repo-full-name = livastic-vm2-primary-20260911/mrg-vm2-sharedcfg-renamed-0911-c4e8
+      - "body ~= VM2-AUTO-COPY-APPROVAL: YES"
+    actions:
+      merge:
+        method: merge
