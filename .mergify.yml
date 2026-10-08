@@ -5,15 +5,3 @@ pull_request_rules:
     actions:
       comment:
         message: VM2-EXTENDS-SOURCE-MARKER-RENAMED-ID1365832155
-
-merge_protections_settings:
-  auto_merge_conditions:
-    - base = vm2-amcheck-target-1008
-    - check-success = vm2-amcheck-arm-1008
-
-merge_protections:
-  - name: VM2 auto merge check generation hold 1008
-    if:
-      - base = vm2-amcheck-target-1008
-    success_conditions:
-      - check-success = vm2-amcheck-hold-1008
